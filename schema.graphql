@@ -1,0 +1,7 @@
+type ONFTMint @entity {
+  minter: Bytes!
+  referrer: Bytes!
+  mintId: BigInt!
+  referralEarnings: BigInt!
+  protocolEarnings: BigInt!
+}
