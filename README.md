@@ -17,9 +17,22 @@ To deploy this subgraph, go through `package.json` file first and substitute all
 Subgraph name also can be adjusted per existing naming policy or for simpler tracking.
 
 ```shell
-yarn
-yarn 0xcodegen
-yarn 0xbuild
-yarn 0xcreate
-yarn 0xdeploy 
+pnpm install
+
+pnpm 0xcodegen
+pnpm 0xbuild
+pnpm 0xcreate
+pnpm 0xdeploy
+```
+
+```graphql
+query {
+  onftmints(subgraphError: deny, first: 100) {
+    minter
+    referrer
+    mintId
+    referralEarnings
+    protocolEarnings
+  }
+}
 ```

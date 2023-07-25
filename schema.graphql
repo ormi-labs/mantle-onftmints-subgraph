@@ -1,4 +1,5 @@
 type ONFTMint @entity {
+  id: ID!
   minter: Bytes!
   referrer: Bytes!
   mintId: BigInt!

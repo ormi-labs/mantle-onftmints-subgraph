@@ -67,3 +67,5 @@ bin/
 out/
 cache/
 .vscode/
+
+package.json

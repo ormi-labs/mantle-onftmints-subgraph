@@ -1,12 +1,12 @@
 specVersion: 0.0.5
 description: UniversalChainsONFT721 Contract
-repository: https://github.com/ormi-labs/mantle-gravatar-subgraph
+repository: https://github.com/ormi-labs/mantle-onftmints-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: UniChainsONFT721
-    network: mainnet
+    network: mantle
     source:
       address: '0xbca721BF74AD68F9afA35DCA0D123A758422ae28'
       abi: UniChainsONFT721
@@ -20,6 +20,6 @@ dataSources:
         - name: UniChainsONFT721
           file: ./abis/UniversalChainsONFT721.json
       eventHandlers:
-        - event: ONFTMinted(address, address, uint256, uint256, uint256)
+        - event: ONFTMinted(indexed address,indexed address,indexed uint256,uint256,uint256)
           handler: handleONFTMinted
       file: ./src/mapping.ts
